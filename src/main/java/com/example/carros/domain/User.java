@@ -1,7 +1,6 @@
-package com.example.carros.api;
+package com.example.carros.domain;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

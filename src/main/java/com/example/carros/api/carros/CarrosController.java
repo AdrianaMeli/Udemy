@@ -1,6 +1,4 @@
-package com.example.carros.api;
-
-
+package com.example.carros.api.carros;
 
 import com.example.carros.domain.Carro;
 import com.example.carros.domain.CarroService;
@@ -13,6 +11,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1/carros")
 public class CarrosController {
@@ -41,7 +40,6 @@ public class CarrosController {
     }
 
     @PostMapping
-    @Secured({ "ROLE_ADMIN" })
     public ResponseEntity post(@RequestBody Carro carro) {
 
         CarroDTO c = service.insert(carro);
@@ -73,4 +71,4 @@ public class CarrosController {
 
         return ResponseEntity.ok().build();
     }
-}
+    }
