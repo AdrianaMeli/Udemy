@@ -6,20 +6,18 @@ import org.modelmapper.ModelMapper;
 
 @Data
 public class CarroDTO {
-    public Long id;
-    public String nome;
-    public String tipo;
+    private Long id;
+    private String nome;
+    private String tipo;
 
-    // Aula 36: fizemos a cópia manualmente
-    /*public CarroDTO(Carro c) {
-        this.id = c.getId();
-        this.nome = c.getNome();
-        this.tipo = c.getTipo();
+    /*public CarroDTO(Carro carro) {
+        this.id = carro.getId();
+        this.nome = carro.getNome();
+        this.tipo = carro.getTipo();
     }*/
 
-    // Aula 38: fizemos a cópia com Model Mapper
-    public static CarroDTO create(Carro c) {
-        ModelMapper mapper = new ModelMapper();
-        return mapper.map(c, CarroDTO.class);
+    public static CarroDTO create(Carro carro) {
+        ModelMapper modelMapper = new ModelMapper();
+        return modelMapper.map(carro, CarroDTO.class);
     }
 }
